@@ -1,0 +1,1048 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Api Documentation",
+    "version": "x.x.x",
+    "title": "Api",
+    "contact": {},
+    "license": {}
+  },
+  "host": "localhost:8088",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "course-controller",
+      "description": "Course Controller"
+    },
+    {
+      "name": "quiz-controller",
+      "description": "Quiz Controller"
+    },
+    {
+      "name": "teacher-controller",
+      "description": "Teacher Controller"
+    },
+    {
+      "name": "student-controller",
+      "description": "Student Controller"
+    },
+    {
+      "name": "documentation-controller",
+      "description": "SwaggerUI is located under /documentation. This mapping redirects the necessary resources for the ui."
+    }
+  ],
+  "paths": {
+    "/delete/{id}": {
+      "delete": {
+        "tags": [ "student-controller" ],
+        "summary": "deleteStudent",
+        "operationId": "deleteStudentUsingDELETE",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": { "description": "OK" },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      }
+    },
+    "/deleteCourse/{id}": {
+      "delete": {
+        "tags": [ "course-controller" ],
+        "summary": "deleteCourse",
+        "operationId": "deleteCourseUsingDELETE",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": { "description": "OK" },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      }
+    },
+    "/deleteQuiz/{id}": {
+      "delete": {
+        "tags": [ "quiz-controller" ],
+        "summary": "deleteQuiz",
+        "operationId": "deleteQuizUsingDELETE",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": { "description": "OK" },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      }
+    },
+    "/deleteTeacher/{id}": {
+      "delete": {
+        "tags": [ "teacher-controller" ],
+        "summary": "deleteTeacher",
+        "operationId": "deleteTeacherUsingDELETE",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": { "description": "OK" },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      }
+    },
+    "/documentation/documentation/api-docs": {
+      "get": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerApiDocs",
+        "operationId": "swaggerApiDocsUsingGET",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      },
+      "head": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerApiDocs",
+        "operationId": "swaggerApiDocsUsingHEAD",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      },
+      "post": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerApiDocs",
+        "operationId": "swaggerApiDocsUsingPOST",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      },
+      "put": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerApiDocs",
+        "operationId": "swaggerApiDocsUsingPUT",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      },
+      "delete": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerApiDocs",
+        "operationId": "swaggerApiDocsUsingDELETE",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      },
+      "options": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerApiDocs",
+        "operationId": "swaggerApiDocsUsingOPTIONS",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      },
+      "patch": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerApiDocs",
+        "operationId": "swaggerApiDocsUsingPATCH",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      }
+    },
+    "/documentation/swagger-resources": {
+      "get": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerResources",
+        "operationId": "swaggerResourcesUsingGET",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      },
+      "head": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerResources",
+        "operationId": "swaggerResourcesUsingHEAD",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      },
+      "post": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerResources",
+        "operationId": "swaggerResourcesUsingPOST",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      },
+      "put": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerResources",
+        "operationId": "swaggerResourcesUsingPUT",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      },
+      "delete": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerResources",
+        "operationId": "swaggerResourcesUsingDELETE",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      },
+      "options": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerResources",
+        "operationId": "swaggerResourcesUsingOPTIONS",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      },
+      "patch": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerResources",
+        "operationId": "swaggerResourcesUsingPATCH",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      }
+    },
+    "/documentation/swagger-resources/configuration/security": {
+      "get": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerConfigSecurity",
+        "operationId": "swaggerConfigSecurityUsingGET",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      },
+      "head": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerConfigSecurity",
+        "operationId": "swaggerConfigSecurityUsingHEAD",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      },
+      "post": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerConfigSecurity",
+        "operationId": "swaggerConfigSecurityUsingPOST",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      },
+      "put": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerConfigSecurity",
+        "operationId": "swaggerConfigSecurityUsingPUT",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      },
+      "delete": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerConfigSecurity",
+        "operationId": "swaggerConfigSecurityUsingDELETE",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      },
+      "options": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerConfigSecurity",
+        "operationId": "swaggerConfigSecurityUsingOPTIONS",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      },
+      "patch": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerConfigSecurity",
+        "operationId": "swaggerConfigSecurityUsingPATCH",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      }
+    },
+    "/documentation/swagger-resources/configuration/ui": {
+      "get": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerUI",
+        "operationId": "swaggerUIUsingGET",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      },
+      "head": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerUI",
+        "operationId": "swaggerUIUsingHEAD",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      },
+      "post": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerUI",
+        "operationId": "swaggerUIUsingPOST",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      },
+      "put": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerUI",
+        "operationId": "swaggerUIUsingPUT",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      },
+      "delete": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerUI",
+        "operationId": "swaggerUIUsingDELETE",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      },
+      "options": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerUI",
+        "operationId": "swaggerUIUsingOPTIONS",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      },
+      "patch": {
+        "tags": [ "documentation-controller" ],
+        "summary": "swaggerUI",
+        "operationId": "swaggerUIUsingPATCH",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/RedirectView" }
+          },
+          "401": { "description": "Unauthorized" },
+          "204": { "description": "No Content" },
+          "403": { "description": "Forbidden" }
+        }
+      }
+    },
+    "/getCourse/{id}": {
+      "get": {
+        "tags": [ "course-controller" ],
+        "summary": "getCourseFromDataBase",
+        "operationId": "getCourseFromDataBaseUsingGET",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Course" }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      }
+    },
+    "/getQuiz/{id}": {
+      "get": {
+        "tags": [ "quiz-controller" ],
+        "summary": "getQuizFromDataBase",
+        "operationId": "getQuizFromDataBaseUsingGET",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Quiz" }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      }
+    },
+    "/getStudent/{id}": {
+      "get": {
+        "tags": [ "student-controller" ],
+        "summary": "getStudentFromDataBase",
+        "operationId": "getStudentFromDataBaseUsingGET",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Student" }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      }
+    },
+    "/getTeacher/{id}": {
+      "get": {
+        "tags": [ "teacher-controller" ],
+        "summary": "getTeacherFromDataBase",
+        "operationId": "getTeacherFromDataBaseUsingGET",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Teacher" }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      }
+    },
+    "/save": {
+      "post": {
+        "tags": [ "student-controller" ],
+        "summary": "saveNewStudent",
+        "operationId": "saveNewStudentUsingPOST",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "student",
+            "description": "student",
+            "required": true,
+            "schema": { "$ref": "#/definitions/Student" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Student" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      }
+    },
+    "/saveCourse": {
+      "post": {
+        "tags": [ "course-controller" ],
+        "summary": "saveNewCourse",
+        "operationId": "saveNewCourseUsingPOST",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "course",
+            "description": "course",
+            "required": true,
+            "schema": { "$ref": "#/definitions/Course" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Course" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      }
+    },
+    "/saveQuiz": {
+      "post": {
+        "tags": [ "quiz-controller" ],
+        "summary": "saveNewQuiz",
+        "operationId": "saveNewQuizUsingPOST",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "quiz",
+            "description": "quiz",
+            "required": true,
+            "schema": { "$ref": "#/definitions/Quiz" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Quiz" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      }
+    },
+    "/saveTeacher": {
+      "post": {
+        "tags": [ "teacher-controller" ],
+        "summary": "saveNewTeacher",
+        "operationId": "saveNewTeacherUsingPOST",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "teacher",
+            "description": "teacher",
+            "required": true,
+            "schema": { "$ref": "#/definitions/Teacher" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Teacher" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      }
+    },
+    "/update/{id}": {
+      "post": {
+        "tags": [ "student-controller" ],
+        "summary": "updateStudent",
+        "operationId": "updateStudentUsingPOST_1",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": { "description": "OK" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      }
+    },
+    "/updateCourse/{id}": {
+      "post": {
+        "tags": [ "course-controller" ],
+        "summary": "updateCourse",
+        "operationId": "updateCourseUsingPOST",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": { "description": "OK" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      }
+    },
+    "/updateQuiz/{id}": {
+      "post": {
+        "tags": [ "quiz-controller" ],
+        "summary": "updateStudent",
+        "operationId": "updateStudentUsingPOST",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": { "description": "OK" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      }
+    },
+    "/updateTeacher/{id}": {
+      "post": {
+        "tags": [ "teacher-controller" ],
+        "summary": "updateTeacher",
+        "operationId": "updateTeacherUsingPOST",
+        "consumes": [ "application/json" ],
+        "produces": [ "*/*" ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": { "description": "OK" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ApplicationContext": {
+      "type": "object",
+      "properties": {
+        "applicationName": { "type": "string" },
+        "autowireCapableBeanFactory": { "$ref": "#/definitions/AutowireCapableBeanFactory" },
+        "beanDefinitionCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "beanDefinitionNames": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "classLoader": { "$ref": "#/definitions/ClassLoader" },
+        "displayName": { "type": "string" },
+        "environment": { "$ref": "#/definitions/Environment" },
+        "id": { "type": "string" },
+        "parent": { "$ref": "#/definitions/ApplicationContext" },
+        "parentBeanFactory": { "$ref": "#/definitions/BeanFactory" },
+        "startupDate": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "Quiz": {
+      "type": "object",
+      "properties": {
+        "course": { "$ref": "#/definitions/Course" },
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": { "type": "string" }
+      }
+    },
+    "Teacher": {
+      "type": "object",
+      "properties": {
+        "courses": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Course" }
+        },
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": { "type": "string" }
+      }
+    },
+    "RedirectView": {
+      "type": "object",
+      "properties": {
+        "applicationContext": { "$ref": "#/definitions/ApplicationContext" },
+        "attributesMap": { "type": "object" },
+        "beanName": { "type": "string" },
+        "contentType": { "type": "string" },
+        "exposePathVariables": { "type": "boolean" },
+        "hosts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "propagateQueryProperties": { "type": "boolean" },
+        "redirectView": { "type": "boolean" },
+        "requestContextAttribute": { "type": "string" },
+        "staticAttributes": { "type": "object" },
+        "url": { "type": "string" }
+      }
+    },
+    "BeanFactory": { "type": "object" },
+    "ClassLoader": {
+      "type": "object",
+      "properties": { "parent": { "$ref": "#/definitions/ClassLoader" } }
+    },
+    "Environment": {
+      "type": "object",
+      "properties": {
+        "activeProfiles": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "defaultProfiles": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "Course": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": { "type": "string" },
+        "quiz": { "$ref": "#/definitions/Quiz" },
+        "students": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Student" }
+        },
+        "teacher": { "$ref": "#/definitions/Teacher" }
+      }
+    },
+    "Student": {
+      "type": "object",
+      "properties": {
+        "courses": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Course" }
+        },
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": { "type": "string" }
+      }
+    },
+    "AutowireCapableBeanFactory": { "type": "object" }
+  }
+}
