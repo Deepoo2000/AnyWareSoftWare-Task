@@ -48,6 +48,6 @@ I will start my explaining from Z-A, from creating (databse) to (rest ontroller)
   // http://localhost:8088/v2/api-docs
   1) created swaggerConfig
   2) created swaggerController
--- see swagger.json in tast
+-- see swagger.json in in postman
 ![Swagger](https://github.com/Deepoo2000/AnyWareSoftWare-Task/assets/104589126/982a73a3-f3aa-4b06-a75f-ac5b97985fd8)
 
