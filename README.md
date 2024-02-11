@@ -41,9 +41,13 @@ I will start my explaining from Z-A, from creating (databse) to (rest ontroller)
 6)## api 
    // http://localhost:8088/
   -- using postman, attach photo see it.
+  ![postMan](https://github.com/Deepoo2000/AnyWareSoftWare-Task/assets/104589126/b7c8dd99-4639-420b-9edc-b550819d5a42)
+
 ......................
 7)## swagger
   // http://localhost:8088/v2/api-docs
   1) created swaggerConfig
   2) created swaggerController
 -- see swagger.json in tast
+![Swagger](https://github.com/Deepoo2000/AnyWareSoftWare-Task/assets/104589126/982a73a3-f3aa-4b06-a75f-ac5b97985fd8)
+
