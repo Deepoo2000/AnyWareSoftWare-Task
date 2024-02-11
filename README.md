@@ -9,6 +9,8 @@ I will start my explaining from Z-A, from creating (databse) to (rest ontroller)
      # relation between teacher and course is @OneToMany 
      # relation between quiz and course is @OneToOne
 -> see StudentManagenestSystem.sql that included all info with comments.
+![EER Digram](https://github.com/Deepoo2000/AnyWareSoftWare-Task/assets/104589126/b820de2c-2a4a-4b75-80a6-f74603d36d38)
+
 ......................
 2)##entity package
    1) created class student (@entity) with attributes for connect with database table
